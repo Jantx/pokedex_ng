@@ -1,0 +1,49 @@
+
+<div class="root">
+
+    <div class="main">
+
+        <div class="header">
+            <div class="content-label">
+                <label for="" class="pokemon-id">#{{pokemon.id}}</label>
+            </div>
+            <div class="pokemon-type {{pokemon.types[0]}}"></div>
+        </div>
+
+        <div class="body">
+
+            <div class="pokemon-icon">
+                <div class="pokemon-cyrcle {{pokemon.types[0]}}"></div>
+                <img src="{{pokemon.image}}" alt="" srcset="" class="pokemon-image">
+            </div>
+
+            <div class="pokemon-information">
+
+                <label for="" class="pokemon-name">{{pokemon.name}}</label>
+
+                <div class="relative-information">
+
+                    <div class="pokemon-weight">
+                        <label for="" class="lightStyle">Weight</label>
+                        <label for="" id="weight" class="info">{{pokemon.weight}} kg</label>
+                    </div>
+
+                    <div class="pokemon-height">
+                        <label for="" class="lightStyle">height</label>
+                        <label for="" id="height" class="info">{{pokemon.height}} m</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="type-information">
+                <label for="" class="lightStyle">Type: </label>
+                <label for="" id="pokemon-type" class="info">{{formattedType}}</label>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

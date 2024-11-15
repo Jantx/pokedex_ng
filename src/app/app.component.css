@@ -1,0 +1,9 @@
+.pokemon-flex-repeater{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1.8rem;
+    justify-items: center;
+
+}
