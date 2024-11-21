@@ -1,7 +1,16 @@
-<h1>{{title}}</h1>
 
-<div class="pokemon-flex-repeater">
-    <app-pokemon-card [pokemon] = "pokemon" *ngFor=" let pokemon of pokemons"></app-pokemon-card>
-</div>
+<ng-container *ngIf="!isLoading">
+    <app-header></app-header>
+    <div class="pokemon-flex-repeater">
+        <app-pokemon-card class="pokemon-card" [pokemon] = "pokemon" *ngFor=" let pokemon of pokemons"></app-pokemon-card>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="isLoading">
+  
+    <div class="pokeLoading">
+        <img src="assets/loanding2-unscreen.gif" alt="" srcset="">
+    </div>
+</ng-container>
 
 <router-outlet />

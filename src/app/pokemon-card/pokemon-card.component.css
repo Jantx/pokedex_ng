@@ -103,8 +103,13 @@
 .pokemon-image {
     object-fit: contain;
     width: 160px;
-    max-width: 160px;
+    cursor: pointer;
     min-width: 160px;
+}
+
+.pokemon-image:hover { 
+    transform: scale(1.01) !important;
+    transition: 0.1s;
 }
 
 .pokemon-information {
@@ -119,6 +124,7 @@
     font-weight: bold;
     font-size: 1.2rem;
     color: #323232 !important;
+    text-transform: capitalize;
 }
 
 .relative-information {
@@ -143,7 +149,19 @@
 
 .type-information {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.6rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.type-information p{
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #FFF;
+    border-radius: 2rem;
+    text-transform: capitalize;
+
 }
 
 .lightStyle {
@@ -172,7 +190,7 @@
 }
 
 .grass {
-    background-color: #3DA22492;
+    background-color: #3DA22492 !important;
 }
 
 .electric {

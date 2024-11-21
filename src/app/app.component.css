@@ -7,3 +7,25 @@
     justify-items: center;
 
 }
+
+.pokemon-card {
+    cursor: pointer;
+}
+
+.pokemon-card:hover{
+    transform: scale(1.05);
+    transition: 0.1s; 
+}
+
+.pokeLoading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.pokeLoading img{
+    user-select: none;
+  }
+

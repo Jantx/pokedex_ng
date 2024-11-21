@@ -1,4 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-color: #ffffff;
+    background-color: #fff;
+}
+
+.normal {
+    background-color: #A0A2A092;
+}
+
+.fire {
+    background-color: #FF810092;
+}
+
+.water {
+    background-color: #2481F092;
+}
+
+.grass {
+    background-color: #3DA22492 !important;
+}
+
+.electric {
+    background-color: #FAC10092;
+}
+
+.ice {
+    background-color: #9DEBFF92;
+}
+
+.fighting {
+    background-color: #E7232492;
+}
+
+.poison {
+    background-color: #923FCC92;
+}
+
+.ground {
+    background-color: #92501B92;
+}
+
+.flying {
+    background-color: #82BAF092;
+}
+
+.psychic {
+    background-color: #EF3F7A92;
+}
+
+.bug {
+    background-color: #92A21292;
+}
+
+.rock {
+    background-color: #B0AB8292;
+}
+
+.ghost {
+    background-color: #713F7192;
+}
+
+.dark {
+    background-color: #4F3F3D92;
+}
+
+.dragon {
+    background-color: #4F60E292;
+}
+
+.steel {
+    background-color: #60A2B992;
+}
+
+.fairy {
+    background-color: #EF71F092;
+}
+
+.all {
+    background-color: #6a6a6ac4;
 }

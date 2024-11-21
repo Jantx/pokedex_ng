@@ -1,12 +1,14 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, ViewEncapsulation} from '@angular/core';
 import { Pokemon } from "../models/pokemon.model";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: 'app-pokemon-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pokemon-card.component.html',
-  styleUrl: './pokemon-card.component.css'
+  styleUrl: './pokemon-card.component.css',
+  encapsulation:ViewEncapsulation.None
 })
 export class PokemonCardComponent {
   
@@ -20,37 +22,21 @@ export class PokemonCardComponent {
   } 
 
   formattedType: string = ""
+  formmatedId: string = ""
 
   ngOnInit(): void {
     this.IdFormatted()
-    this.typeFormatted()
   }
 
   IdFormatted(): void {
 
     if (this.pokemon.id.length === 1) {
-      this.pokemon.id = "00" + this.pokemon.id;
+      this.formmatedId = "00" + this.pokemon.id;
     } 
     else if (this.pokemon.id.length === 2) {
-      this.pokemon.id = "0" + this.pokemon.id;
-    }
-
-  }
-
-  typeFormatted(): void{
-
-    if (this.pokemon.types.length > 1) {
-      for (let i = 0; i < this.pokemon.types.length; i++) {
-        var type = this.pokemon.types[i];
-        if (i===0) {
-          this.formattedType = this.formattedType + type.toUpperCase()
-        }
-        else{
-          this.formattedType = this.formattedType + "/" + type.toUpperCase()
-        }
-      }
+      this.formmatedId = "0" + this.pokemon.id;
     }else{
-      this.formattedType = this.pokemon.types[0].toUpperCase()
+      this.formmatedId = this.pokemon.id;
     }
 
   }

@@ -5,7 +5,7 @@
 
         <div class="header">
             <div class="content-label">
-                <label for="" class="pokemon-id">#{{pokemon.id}}</label>
+                <label for="" class="pokemon-id">#{{formmatedId}}</label>
             </div>
             <div class="pokemon-type {{pokemon.types[0]}}"></div>
         </div>
@@ -14,7 +14,7 @@
 
             <div class="pokemon-icon">
                 <div class="pokemon-cyrcle {{pokemon.types[0]}}"></div>
-                <img src="{{pokemon.image}}" alt="" srcset="" class="pokemon-image">
+                <img src="{{pokemon.image}}" alt="" class="pokemon-image">
             </div>
 
             <div class="pokemon-information">
@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="pokemon-height">
-                        <label for="" class="lightStyle">height</label>
+                        <label for="" class="lightStyle">Height</label>
                         <label for="" id="height" class="info">{{pokemon.height}} m</label>
                     </div>
 
@@ -38,10 +38,8 @@
             </div>
 
             <div class="type-information">
-                <label for="" class="lightStyle">Type: </label>
-                <label for="" id="pokemon-type" class="info">{{formattedType}}</label>
+                <p class="{{type}}" *ngFor="let type of pokemon.types">{{type}}</p>
             </div>
-
         </div>
 
     </div>
