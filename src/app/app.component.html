@@ -1,16 +1,27 @@
-
 <ng-container *ngIf="!isLoading">
-    <app-header></app-header>
+    <app-header (typeSelected)="onTypeSelected($event)"></app-header>
+
     <div class="pokemon-flex-repeater">
-        <app-pokemon-card class="pokemon-card" [pokemon] = "pokemon" *ngFor=" let pokemon of pokemons"></app-pokemon-card>
+        <app-pokemon-card 
+            class="pokemon-card" 
+            [pokemon]="pokemon" 
+            *ngFor="let pokemon of displayedPokemons">
+        </app-pokemon-card>
     </div>
+
+  
+    <app-footer  
+        [currentPage]="currentPage" 
+        [totalPages]="totalPages" 
+        (pageChanged)="onPageChanged($event)">
+    </app-footer>
 </ng-container>
+
 
 <ng-container *ngIf="isLoading">
-  
     <div class="pokeLoading">
-        <img src="assets/loanding2-unscreen.gif" alt="" srcset="">
+        <img src="assets/loanding2-unscreen.gif" alt="Cargando...">
     </div>
 </ng-container>
 
-<router-outlet />
+<router-outlet></router-outlet>

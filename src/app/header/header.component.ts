@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule} from '@angular/common';
+import { Component, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -31,9 +31,9 @@ export class HeaderComponent {
     'Fairy'
   ];
 
-  optionSelected: string = "";
+  @Output() typeSelected = new EventEmitter<string>();
 
-  selectOption(option:string): void{
-    this.optionSelected = option;
+  selectOption(option: string): void {
+    this.typeSelected.emit(option);
   }
 }

@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem;
+  }
+  
+  .footer div {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    user-select: none;
+    background-color: #FFF;
+    color: #222;
+    transition: 0.1s;
+  }
+  
+  .footer div:active{
+    transform: scale(0.92);
+  }
+
+  .footer div.active {
+    background-color: #1C3A62;
+    border-color: #1C3A62;
+    color: #FFF;
+    font-weight: bold;
+  }
+  
+  .footer div.disabled {
+    color: #aaa;
+  }
+
+  img{
+    width: 10px;
+  }
+  

@@ -1,0 +1,23 @@
+<div class="footer">
+    <div 
+      (click)="changePage(currentPage - 1)" 
+      [class.disabled]="currentPage === 1">
+         <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="">
+    </div>
+  
+    <div 
+      *ngFor="let page of rangeSelection" 
+      [class.active]="page === currentPage" 
+      [class.disabled]="page === -1"
+      (click)="page !== -1 && changePage(page)">
+      <span *ngIf="page !== -1">{{ page }}</span>
+      <span *ngIf="page === -1">...</span>
+    </div>
+  
+    <div 
+      (click)="changePage(currentPage + 1)" 
+      [class.disabled]="currentPage === totalPages">
+      <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="">
+    </div>
+  </div>
+  
